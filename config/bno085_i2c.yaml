@@ -2,6 +2,7 @@ bno08x_driver:
   ros__parameters:
 
     frame_id: "imu_link"  # The frame_id to use for the sensor data
+    verbose: false        # Enable verbose logging (default false)
 
     # Communication Interface
     # Select the communication interface to use 
@@ -20,3 +21,4 @@ bno08x_driver:
       imu:
         enabled: true
         rate: 100   # max 400 Hz (anythihng above 100Hz depends on your hardware)
+        orientation_yaw_variance: 0.0075   # default 0.0075 (≈5°) means pretty trustworthy
